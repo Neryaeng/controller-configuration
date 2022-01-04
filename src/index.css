@@ -1,13 +1,428 @@
 body {
+  
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+    color: rgb(243, 238, 255);
+    /*    color: rgb(216, 195, 101);*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /*background-color:  rgb(22, 19, 76) ;*/
+  background: #0f0c29;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #020338, #0b0085, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #020338, #0b0085, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+ 
+#pageTitle{
+  background-color:  rgb(33, 32, 64)  ;
+  text-align: center;
+
+}
+.textStyle1{
+  color: #0271cc;
+}
+.textStyle2{
+  color: #89caff;
+}
+.axes {
+  /*padding: 1em;*/
+  font-family: "Comic Sans MS";
+}
+.axisValues {
+  color: rgb(89, 255, 103);
+}
+.buttons {
+  margin-left: 1em; 
+}
+.buttonsClass {
+  margin-left: 1em;
+  margin: 0.3em  !important;
+  width: 1em  !important;
+  height: 4.5em  !important;
+  position: relative;
+  text-align: center;
+  line-height: 144px  !important;
+  border-top-left-radius: 50% !important;
+  border-top-right-radius: 50% !important;
+  border-bottom-right-radius: 50% !important;
+  border-bottom-left-radius: 50% !important;
+    box-shadow: 0px 3px 8px #063364, inset 0px 2px 3px #525253  !important;
+   font-weight: bold !important;
+   color: #fdfcf9b8 !important;
+    background-color: #021f03 !important; 
+    
+}
+.pressedButtonsClass {
+  margin-left: 1em;
+  margin: 0.3em  !important;
+  width: 1em  !important;
+  height: 4.5em  !important;
+  position: relative;
+  text-align: center;
+  line-height: 144px  !important;
+  border-radius: 50%  !important;
+  box-shadow: 0px 3px 8px #055731, inset 0px 2px 3px #55fc7f  !important;
+   font-weight: bold !important;
+   color: #043319b8 !important;
+ }
+.boxStyle{
+  /*height: 10em  !important;  */
+   justify-content: center   !important;  
+  
+}
+
+.deleStyle{
+  background-color:#ffffff00 !important;
+  text-align: right !important;  
+  justify-content: left !important;
+  
+  color: rgb(57, 199, 255) !important;
+
+}
+.addingStyle{
+  color: rgb(57, 199, 255) !important;
+}
+.addingStyle:hover{
+  color: rgb(0, 230, 69) !important;
+}
+
+.deleStyle:hover {
+   color: rgb(255, 0, 0) !important;
+}
+.deleStyle:disabled {
+  color: rgb(83, 83, 83) !important;
+}
+/*meter*/.axis {
+   width: 87%;
+  margin: 0.1em; 
+  height: 2.2em  !important;
+ } 
+ meter::-webkit-meter-bar {
+  background: none; /* Required to get rid of the default background property */
+  background-color: whiteSmoke;
+  box-shadow: 0 5px 5px -5px #333 inset;
+} 
+meter::-webkit-meter-optimum-value {    
+  box-shadow: 0 5px 5px -5px #999 inset;    
+  background-image: linear-gradient(    
+  25deg,     
+  #0d630d 5%,     
+  #025c02 5%,    
+  #016901 25%,    
+  #016101 25%,    
+  #018a01 55%,    
+  #019701 55%,    
+  #229b22 95%,    
+  #469646 95%,    
+  #71af71 100%    
+  );    
+  background-size: 100% 100%;    
+  }    
+
+  meter::-webkit-meter-even-less-good-value  {    box-shadow: 0 5px 5px -5px #999 inset;    
+  background-image: linear-gradient(    
+  25deg,     
+  #333300 5%,     
+  #666600 5%,    
+  #999900 25%,    
+  #CCCC00 25%,    
+  #FFFF00 55%,    
+  #FFFF33 55% 
+  );    
+  background-size: 100% 100%;    
+  }    
+
+ meter::-webkit-meter-suboptimum-value {     
+  box-shadow: 0 5px 5px -5px #999 inset;    
+  background-image: linear-gradient(    
+  25deg,     
+  #00ccff 5%,     
+  #330000 5%,    
+  #660000 25%,    
+  #990000 25%,    
+  #CC0000 55%,    
+  #FF0000 55%,    
+  #FF3333 95%,    
+  #FF6666 95%,    
+  #FF9999 100%    
+  );    
+  background-size: 100% 100%;    
+  }    
+
+.button {
+  display: inline-block;
+  width: 1em;
+  text-align: center;
+  padding: 1em;
+  border-radius: 20px;
+  border: 1px solid black;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAAXNSR0IArs4c6QAAAAxJREFUCNdjYPjPAAACAgEAqiqeJwAAAABJRU5ErkJggg==);
+  background-size: 0% 0%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.pressed {
+  border: 1px solid red;
+  content: "touch";
+}
+
+.touched::after {
+  content: "touch";
+  display: block;
+  position: absolute;
+  margin-top: -0.2em;
+  margin-left: -0.5em;
+  font-size: 0.8em;
+  opacity: 0.7;
+}
+
+.intervalInputText{
+  background-color: whiteSmoke   ;
+  color: #0271cc;
+  text-align: left;
+}
+
+.MuiAccordion-root{ 
+  color: rgb(217, 220, 243) !important;
+  background-color:rgb(24, 21, 70) !important;
+  text-align: left !important; 
+  padding: 0em !important;
+}
+.MuiAccordionSummary-root{ 
+  color: rgb(217, 220, 243) !important;
+  background-color:rgb(26, 23, 90)  !important;
+  text-align: left !important; 
+  padding-top: -1em !important;
+  padding-bottom: -1em !important;
+
+}
+.testing{
+  background:linear-gradient(rgba(25, 14, 43, 0.5),transparent);
+  background-color:rgb(6, 14, 59)
+}
+#rowStyle_0{
+  background-color:rgb(22, 19, 76);
+  color:rgb(255, 255, 255) !important;
+  text-align: center !important;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  padding-right: 0em !important;
+  padding-left: 0em !important;
+
+  border-bottom: none !important;
+  margin-right: 0em !important;
+  margin-left: 0em !important;
+}
+#rowStyle_0:focus{
+  background-color:rgb(28, 24, 95) !important;
+
+}
+.rowStyle_0{
+  background-color:rgb(22, 19, 76);
+  color:rgb(255, 255, 255) !important;
+  text-align: center !important;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  padding-right: 0em !important;
+  padding-left: 0em !important;
+  border-bottom: none !important;
+  margin-right: 0em !important;
+  margin-left: 0em !important;
+}
+.rowStyle_0 ::before{
+  border: none !important;
+}
+.rowStyle_0 ::after{
+  border: none !important;
+}
+.rowStyle_1 ::before{
+  border: none !important;
+}
+.rowStyle_1 ::after{
+  border: none !important;
+}
+.buttonsSettingGrid{ 
+background-color:#212040 !important; 
+
+}
+.buttonsSettingGrid .css-1jbbcbn-MuiDataGrid-columnHeaderTitle{
+  color:rgb(255, 255, 255) !important; 
+}
+.buttonsSettingGrid .MuiInputBase-input{
+  color: #fff;
+    font-family: "Comic Sans MS";
+  text-align: center  !important; 
+  background-color:rgb(32, 28, 109) !important; 
+ 
+
+}
+.buttonsSettingGrid .MuiDataGrid-cell{
+  color: #fff !important;  
+  font-family: "Comic Sans MS"; 
+  text-align: center !important;  
+}
+
+.buttonsSettingGrid .MuiDataGrid-booleanCell[data-value="false"]{
+  color:rgb(228, 69, 69) !important;
+  background-color:rgb(32, 30, 80) !important;  
+}.buttonsSettingGrid .MuiDataGrid-booleanCell[data-value="true"]{
+  color:rgb(4, 196, 116) !important;
+  background-color:rgb(32, 30, 80) !important;  
+}
+.buttonsSettingGrid .MuiDataGrid-cell{
+  background-color:rgb(32, 30, 80) !important; 
+
+}
+.buttonsSettingGrid .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root{
+  color:rgb(4, 196, 116) !important;
+  background-color:rgb(32, 30, 80) !important;  
+}
+.buttonsSettingGrid .MuiDataGrid-editBooleanCell{
+  background-color:rgb(32, 30, 80) !important; 
+
+}
+#rowStyle_1{
+  background-color:rgb(32, 30, 80);
+  color:rgb(255, 255, 255) !important;
+  text-align: center !important;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  padding-right: 0em !important;
+  padding-left: 0em !important;
+  border-bottom: none !important;
+  margin-right: 0em !important;
+  margin-left: 0em !important;
+}
+#rowStyle_1:focus{
+  background-color:rgb(40, 38, 100) !important;
+
+}
+.rowStyle_1{
+  background-color:rgb(32, 30, 80);
+  color:rgb(255, 255, 255) !important;
+  text-align: center !important;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  padding-right: 0em !important;
+  padding-left: 0em !important;
+  border-bottom: none !important;
+  margin-right: 0em !important;
+  margin-left: 0em !important;
+}
+ 
+ 
+#selectboxStyle{
+  background-color:rgb(0 123 221);
+  color:rgb(255, 255, 255) !important;
+  text-align: center !important;
+  
+}
+
+.tableContainerStyle{
+background-color:rgba(255, 255, 255, 0) !important;
+padding:0em !important;
+margin: 0% !important;
+
+}
+.noSpacesStyle{
+ margin: 0% !important;
+ padding-bottom: 0.4em !important; 
+}
+.buttonSettingsSelectStyle{
+width:10em;
+background-color:#0271cc!important;
+color: #fff !important;
+}
+
+.glow {
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.MuiTableCell-root.MuiTableCell-body.MuiInputBase-booleanCell{
+  background-color:#0271cc!important;
+ color:#0271cc!important;
+
+}
+ .mouseEnterStyle{
+  color:#016101 !important;
+ }
+ .mouseOutStyle{
+  color:#cdffcd !important;
+ }
+.drop-shadow{
+  float: inherit;
+  filter: drop-shadow(17px 17px 17px #da1313) !important;
+  -webkit-filter: drop-shadow(17px 17px 17px #a79cfc) !important;
+}
+ 
+.controller-container {
+  border: 0.5em solid rgb(36, 0, 167);
+    height: 100 !important; 
+  justify-content: left !important;
+ }
+ .controllerLayoutDiv {
+  padding-top: 1.5%;
+padding-right: 3.5%;
+padding-left:  3.5%;
+
+ }
+.container {
+  padding-top: 1.5%;
+   width: 60%;
+  display:contents ;
+  justify-content: center;
+  
+  position: 'absolute'; left: '50%'; top: '50%';
+  transform: 'translate(-50%, -50%)'
+}
+ 
+ .MuiInputBase-input ::before{
+  border-bottom: none !important;
+}
+.MuiInputBase-input ::after{
+  border-bottom: none !important;
+} 
+.MuiInputBase-input .MuiInputBase-booleanCell[data-value="true"]{
+  color:rgb(4, 196, 116) !important;
+  background-color:rgb(32, 30, 80) !important;  
+}
+.tableCheckbox{
+  padding: 0em !important;
+  color:rgb(255, 255, 255) !important;
+  }
+  .Mui-checked{
+    color:rgb(4, 196, 116) !important;
+     }
+     .MuiTableCell-root{
+     line-height: 1.1em !important;
+     border-bottom:none !important;
+     }
+.tableTextField {
+  /*font-size: 70% !important;*/
+  justify-content: center;
+   padding-top: 0em !important;
+   padding-bottom: 0em !important;
+   padding-left: 2.2em !important;
+   padding-right: 2.2em !important;
+ /*  color: #fff !important;*/
+  /* font-family: "Comic Sans MS" !important;*/
+ text-align: center  !important; 
+}
+.iconsStyle{
+  font-size: 150% !important;
+  justify-content: center !important;
+ }
+ #justifyContentCenter{
+  justify-content: center !important;
+  padding-left: 10% !important;
+
+ }
