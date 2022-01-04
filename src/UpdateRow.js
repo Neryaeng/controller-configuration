@@ -101,8 +101,7 @@ const columns = [
     editable: true,
      
   },
-  {
-    
+  { 
         field: 'Delete',
         headerName: 'Delete',
         width: 70,
