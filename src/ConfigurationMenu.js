@@ -420,6 +420,7 @@ export default function ConfigurationMenu({ gamepads }) {
                         </AccordionDetails>
                       </Accordion>
                       {
+                        
                         //BUTTONS TABLE
                       }
                       <Accordion disabled={false}>
