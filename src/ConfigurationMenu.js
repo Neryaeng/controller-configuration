@@ -23,7 +23,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
  import {  GiSteeringWheel } from "react-icons/gi";
  import { BiJoystickButton} from "react-icons/bi";
  import Checkbox from '@mui/material/Checkbox';
-
+ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import controllerIMg from "./images/xbox.png";
 //import USB Gamepad (Vendor_0810 Product_0001) from "./Assets/USB Gamepad (Vendor_0810 Product_0001).png";
 //UpdateRowsApiRef
@@ -44,6 +44,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
     paddingBottom: 0,
     fontSize: 12,
     backgroundColor: "rgb(33,32,64)",
+    fontFamily: "Comic Sans MS",
     color: theme.palette.common.white,
     border: "0px",
   },
@@ -83,7 +84,7 @@ export default function ConfigurationMenu({ gamepads }) {
   };
   const updateJSONObjButtonValue = (index, jsonText) => () => {
     let newArr = [...configurationJsonListButtons]; // copying the old datas array
-    configurationJsonListButtons[0][
+    configurationJsonListButtons[index][
       "KeyValueOfDeviceDrivingOperationDriverOperationYpjuv_PMd"
     ]["Value"] = jsonText;
   };
@@ -420,7 +421,6 @@ export default function ConfigurationMenu({ gamepads }) {
                         </AccordionDetails>
                       </Accordion>
                       {
-                        
                         //BUTTONS TABLE
                       }
                       <Accordion disabled={false}>
@@ -433,9 +433,7 @@ export default function ConfigurationMenu({ gamepads }) {
                             <b> <BiJoystickButton className="iconsStyle"/>&nbsp;Buttons Settings </b>
                           </Typography>
                         </AccordionSummary>
-                        <div>
-                          {JSON.stringify(configurationJsonListButtons)}
-                        </div>
+                       
                         <AccordionDetails>
                           {actions.map((button, index) => (
                             <Accordion>
@@ -443,9 +441,14 @@ export default function ConfigurationMenu({ gamepads }) {
                                 expandIcon={<ExpandMoreIcon />}
                                 aria-controls="panel1a-content"
                                 id={"button_" + index + "_Section"}
-                              >
+                              >    <div id="red" className="circle">
+                              <p class="text"><PlayArrowIcon/></p>
+                                 {
+                                //JSON.stringify(configurationJsonListButtons)
+                              }
+                              </div>&nbsp; 
                                 <Typography className="mainPageStyle">
-                                  {"Button " + ++index}{" "}
+                                {"Button " + (index+1)}{" "}
                                 </Typography>
                               </AccordionSummary>
                               <AccordionDetails>
@@ -453,7 +456,7 @@ export default function ConfigurationMenu({ gamepads }) {
                                   // <UpdateRowsApiRef  updateJSONObjButtonValue={updateJSONObjButtonValue}/>
                                 }
                                 <ButtonsTable
-                                  index={index}
+                                  buttonIndex={index}
                                   updateJSONObjButtonValue={
                                     updateJSONObjButtonValue
                                   }

@@ -57,6 +57,82 @@ code {
     background-color: #021f03 !important; 
     
 }
+.circle {
+  display: flex;
+  width: 1.7em;
+  height: 1.7em;
+  background-color: rgb(2, 2, 2);
+  border-radius: 50%;
+  border:0.1em solid #9fa09f;
+  
+}
+
+.circleDoubleBorder {
+  display: flex;
+  width: 1.7em;
+  height: 1.7em;
+  background-color: rgb(2, 2, 2);
+  border-radius: 50%;
+   border:0.2em double #9fa09f;
+
+}
+.square {
+  display: flex;
+  width: 1.7em;
+  height: 1.7em;
+  background-color: red;
+}
+.squareB {
+  display: flex;
+  width: 1.7em;
+  height: 1.7em;
+  background-color: red;
+  border-top-left-radius: 313% ;
+  border-top-right-radius:  2%  ;
+  border-bottom-right-radius: 2% ;  
+  border-bottom-left-radius: 213%  ;
+}
+.polygon {
+  display: flex;
+  height: 1.1em;
+  width: 2.1em;
+  border:0.1em solid #9fa09f;
+
+  background-color: rgb(32, 30, 30);
+  border-top-left-radius: 37% ;
+  border-top-right-radius:  32%  ;
+  border-bottom-right-radius: 13% ;  
+  border-bottom-left-radius: 13%  ;
+}
+.polygonLong {
+  display: flex;
+  width: 1.4em;
+  height: 1.8em;
+  border:0.1em solid #9fa09f;
+
+  background-color: rgb(32, 30, 30);
+  border-top-left-radius: 13% ;
+  border-top-right-radius: 13%  ;
+  border-bottom-right-radius: 35% ;  
+  border-bottom-left-radius: 35%  ;
+}
+.text {
+  font-size: 0.9em;
+  margin: auto;
+  color: #9c9c9c;
+  font-family: "Comic Sans MS";
+}
+ 
+.scrollable-element {
+  scrollbar-color: red yellow !important; /* red is for the thumb and yellow is for the track */
+}
+.track-horizontal {
+  background-color: blue !important;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  height: 10px !important;
+}
 .pressedButtonsClass {
   margin-left: 1em;
   margin: 0.3em  !important;
@@ -214,7 +290,7 @@ meter::-webkit-meter-optimum-value {
   padding-bottom: 0em;
   padding-right: 0em !important;
   padding-left: 0em !important;
-
+  font-family: "Comic Sans MS";
   border-bottom: none !important;
   margin-right: 0em !important;
   margin-left: 0em !important;
@@ -290,6 +366,7 @@ background-color:#212040 !important;
 #rowStyle_1{
   background-color:rgb(32, 30, 80);
   color:rgb(255, 255, 255) !important;
+  font-family: "Comic Sans MS";
   text-align: center !important;
   padding-top: 0em;
   padding-bottom: 0em;

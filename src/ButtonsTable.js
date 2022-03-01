@@ -22,6 +22,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
     color: theme.palette.common.white,
     borderBottom: "none",
     margin:0,
+
   },
   [`&.${tableCellClasses.body}`]: {
     fontSize: 11,
@@ -133,7 +134,9 @@ export default function ButtonsTable(props) {
   };
   return (
     <div >
-<div>{JSON.stringify(buttonRows)}</div>
+<div>{
+//JSON.stringify(buttonRows)
+}</div>
        <Button className={"addingStyle"} size="small" onClick={handleAddRow}>
          <AddCircleOutlineIcon />&nbsp; Add a row  
       </Button>
@@ -142,9 +145,9 @@ export default function ButtonsTable(props) {
         className={"addingStyle"}
         size="small"
         value={buttonRows}
-        onClick={props.updateJSONObjButtonValue(0, buttonRows)}
+        onClick={props.updateJSONObjButtonValue((props.buttonIndex), buttonRows)}
       >
-    <SaveIcon />&nbsp; Save Settings 
+    <SaveIcon />&nbsp; Save Settings  
       </Button>
       <Table  aria-label="simple table">
         <TableHead>
